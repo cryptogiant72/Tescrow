@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EscrowAdvansed - Truffle Webpack Demo w/ Frontend</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+<!--  <link href="./app.css" rel='stylesheet' type='text/css'>
+-->
+<!--<link rel="stylesheet" href="node_modules\semantic-ui-css\semantic.min.css">
+-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <meta charset="utf-8">
+</head>
+<body>
+ <h2><center>Создание контракта</center></h2>
+<hr>
+<br>
+<label for="Seller_address">Seller address: <span id="selleraddr1">0x0...</span>
+<br><label for="Seller Arbiter">Seller Arbiter<input id="sellerarb1" maxlength="40" size="40" value=>
+<br>
+<br><label for="Freezeperiod">Freezeperiod<input id="freezp1" maxlength="40" size="40" value=10>
+<br>
+<br><label for="Fee promille">Fee promille<input id="fee1" maxlength="40" size="40" value=15>
+<br>
+<br><label for="Rew promille">Reward promille<input id="rew1" maxlength="40" size="40" value=0>
+<br>
+<span id="createStatus"></span>
+<br><br><td align="right"> <button id="CreateEscr" onclick="App.deployEscrow()">New</button></td>
+<hr>
+<h2><center>Старт Эскроу</center></h2>
+<hr>
+<br>
+<label for="Buyer address">Buyer address: <span id="buyeraddr1">0x0...</span>
+<br>
+<br><label for="Seller address">Seller address<input id="inp2seller" maxlength="40" size="40" value=>
+<br>
+<br><label for="Amount">Amount<input id="inp2amount" maxlength="40" size="40" value=10>
+<br>
+<br><label for="Description">Description<input id="inp2description" maxlength="40" size="40" value="WoW!">
+<br>
+<span id="startStatus"></span>
+<br><br><td align="right"> <button id="StartEscr" onclick="App.startEscrow()">Start</button></td>
+<hr>
+<h2><center>Seller</center></h2>
+<hr>
+<h2><center>Сделки Invoice</center></h2>
+<div class="sInvoice">
+
+</div>
+
+<hr>
+
+<h2><center>Текущие сделки</center></h2>
+<hr>
+<div class="sCurrent">
+
+ </div>
+</div>
+
+<hr>
+
+<h2><center>Замороженные сделки</center></h2>
+<hr>
+<div class="sFreeze">
+
+ </div>
+<hr>
+<h2><center>Buyer</center></h2>
+<hr>
+<h2><center>
+Сделки с продавцами
+</center></h2>
+<form>
+  <br>
+<label for="Seller address">Seller address: <span id="selleraddr2">0x0...</span>
+	<br>
+  Amount:<p> <span id="buyer1amount"></span>
+  Description:<p> <span id="buyer1Description"></span>
+  Status:<p><span id="buyer1Status"></span>
+  <button id="buyer1Detail" onclick="">Detail</button>
+ </form>
+ <form><p>
+ </form>
+ <hr>
+<h2><center>
+  <p>&nbsp;</p>
+  <p>Сделки с продавцом</p>
+</center></h2>
+<hr>
+<h2><center>Адрес продавца: <span id="selleraddr3">0x0...</span></center></h2>
+<hr>
+<div class="buyer2" id="b2">
+</div>
+
+  <hr>
+ <h2><center>Arbiter</center></h2>
+  <hr>
+  <h2><center>Продавцы</center></h2>
+  <hr>
+
+  Address:<p><span id="arbiter1address"></span>
+ <button id="arbiter1Detail" onclick="">Detail</button>
+
+
+  <hr>
+<h2><center>Продавец</center></h2>
+<hr>
+<div class="arbiter2">
+</div>
+ <hr>
+</br>
+ <h2><center>Get fees</center></h2>
+ <hr>
+ <div class="arbiter3">
+   <button type="button" id="arb3" onclick="App.getFees()">Get fees!</button>
+ </div>
+  <hr>
+
+  <h2><center>Get Money!</center></h2>
+  <hr>
+  <p> Both arbiter and _peer_ (opposit debater) kept silent.
+  <div class="arbiter4">
+    <button type="button" id="arb4" onclick="App.getMoney()">Get Money!</button>
+  </div>
+   <hr>
+
+
+
+</body>
+</html>
